@@ -1,0 +1,11 @@
+#!/bin/sh
+
+TTY_NUM="$1"
+
+# Does not check if the tty is a valid tty first, but whatever
+if [ -n "$TTY_NUM" ] && [ "$TTY_NUM" -eq "$TTY_NUM" ] 2>/dev/null; then
+  echo $TTY_NUM
+  sudo pkill -KILL -t tty$TTY_NUM
+else
+  echo "Error: Must enter the TTY number to kill as parameter"
+fi

@@ -1,0 +1,3 @@
+#!/bin/sh
+
+dmenu "$@" -p qutebrowser < /dev/null | xargs -r -d '\n' qutebrowser &

@@ -1,0 +1,3 @@
+#!/bin/sh
+
+dmenu "$@" -p surf < /dev/null | xargs -r -d '\n' surf &

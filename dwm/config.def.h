@@ -19,9 +19,6 @@ static const char *colors[][3]      = {
 };
 
 static const char *const autostart[] = {
-  "sh", "-c", "xhost", "+SI:localuser:$USER", NULL, /* Needed for shared host/guest clipboard */
-  "spice-vdagent", NULL,
-  "xrandr", "--output", "Virtual-1", "--mode", "1920x1080", NULL, // Adjust for your device
   "dwmblocks", NULL,
 	"st", NULL,
 	NULL /* terminate */
@@ -44,7 +41,7 @@ static const Rule rules[] = {
 static const float mfact     = 0.55; /* factor of master area size [0.05..0.95] */
 static const int nmaster     = 1;    /* number of clients in master area */
 static const int resizehints = 1;    /* 1 means respect size hints in tiled resizals */
-static const int lockfullscreen = 1; /* 1 will force focus on the fullscreen window */
+static const int lockfullscreen = 0; /* 1 will force focus on the fullscreen window */
 static const int refreshrate = 120;  /* refresh rate (per second) for client move/resize */
 
 static const Layout layouts[] = {

@@ -12,8 +12,9 @@ mkdir -p "$INSTALL_DIR"
 
 # clone configs and move them to $HOME
 git clone https://github.com/hosua/configs.git
+
 pushd configs
-cp -r .config .bash_aliases $HOME
+cp -r .config .bash_aliases .Xauthority "$HOME"
 popd || exit
 
 cp -r .config/qutebrowser ~/.config

@@ -19,6 +19,18 @@ When `setup.sh` finishes installing and configuring everything, it will reboot y
 
 When you login, you will start with just a `tty`. To launch the graphical environment, run the `startx` command.
 
+# What's in here?
+
+My minimally patched versions of suckless (dmenu, dwm, dwmblocks, st, surf). However, I don't actually recommend using surf. It consumes way more memory than it should and has far too many incompatibility issues with the modern web. `qutebrowser`, however, is great for vim nerds. However, it does not support the usual chrome/firefox plugins, so you may end up wanting to just install `brave`.
+
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/20699486-4310-47ac-9e26-09bd8961f4cf" />
+
+Quick launch `qutebrowser` with `Super+q`: 
+
+https://github.com/user-attachments/assets/d0eef1bb-8049-4acf-93b1-a07483413498
+
+A bunch of dotfiles from my [configs](https://github.com/hosua/configs) repo are also included. Note that my configs contain more than what is necessary for this setup, I added the entire repo as a submodule to keep things simple. The most important dotfiles from my configs repo are probably `tmux`, `neovim`, and `ranger` which are what I tend to universally use.
+
 # dwm Keybinds
 
 **Modifier:** `Super` (Windows key)
@@ -75,14 +87,3 @@ When you login, you will start with just a `tty`. To launch the graphical enviro
 - `Super+Right-drag` window - Resize window
 - Middle-click window title - Zoom window
 
-# What's in here?
-
-My minimally patched versions of suckless (dmenu, dwm, dwmblocks, st, surf). However, I don't actually recommend using surf. It consumes way more memory than it should and has far too many incompatibility issues with the modern web. `qutebrowser`, however, is great for vim nerds. However, it does not support the usual chrome/firefox plugins, so you may end up wanting to just install `brave`.
-
-<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/20699486-4310-47ac-9e26-09bd8961f4cf" />
-
-Quick launch `qutebrowser` with `Super+q`: 
-
-https://github.com/user-attachments/assets/d0eef1bb-8049-4acf-93b1-a07483413498
-
-A bunch of dotfiles from my [configs](https://github.com/hosua/configs) repo are also included. Note that my configs contain more than what is necessary for this setup, I added the entire repo as a submodule to keep things simple. The most important dotfiles from my configs repo are probably `tmux`, `neovim`, and `ranger` which are what I tend to universally use.

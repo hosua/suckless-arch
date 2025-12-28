@@ -42,6 +42,4 @@ pushd surf
 sudo make install
 popd || exit
 
-./scripts/helpers/install-ly.sh
-
 reboot

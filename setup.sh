@@ -1,5 +1,7 @@
 #!/bin/sh
 
+git submodule update --init
+
 INSTALL_DIR="$HOME/dev"
 
 mkdir -p "$INSTALL_DIR"
@@ -10,15 +12,14 @@ mkdir -p "$INSTALL_DIR"
 # install all pacman dependencies
 ./scripts/helpers/pacman-install-list.sh
 
-# clone configs and move them to $HOME
-git clone https://github.com/hosua/configs.git
-
 pushd configs
 cp -r .config .bash_aliases .Xauthority $HOME
 popd || exit
 
 cp -r .config/qutebrowser $HOME/.config
 cp .bashrc .xinitrc $HOME
+
+# install suckless tools
 
 pushd dwm
 sudo make install
@@ -36,7 +37,11 @@ pushd st
 sudo make install
 popd || exit
 
+# I prefer qutebrowser over surf, but we'll install my build anyway
 pushd surf 
 sudo make install
 popd || exit
 
+./scripts/helpers/install-ly.sh
+
+reboot

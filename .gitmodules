@@ -1,0 +1,6 @@
+[submodule "configs"]
+	path = configs
+	url = https://github.com/hosua/configs.git
+[submodule "ly"]
+	path = ly
+	url = https://github.com/fairyglade/ly.git

@@ -14,10 +14,11 @@ mkdir -p "$INSTALL_DIR"
 git clone https://github.com/hosua/configs.git
 
 pushd configs
-cp -r .config .bash_aliases .xinitrc .Xauthority "$HOME"
+cp -r .config .bash_aliases .Xauthority $HOME
 popd || exit
 
-cp -r .config/qutebrowser ~/.config
+cp -r .config/qutebrowser $HOME/.config
+cp .bashrc .xinitrc $HOME
 
 pushd dwm
 sudo make install

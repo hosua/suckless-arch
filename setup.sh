@@ -9,16 +9,13 @@ fi
 
 git submodule update --init
 
-INSTALL_DIR="$HOME/dev"
-
-mkdir -p "$INSTALL_DIR"
-
 # install yay
 ./scripts/helpers/yay-install.sh
 
 # install all pacman dependencies
 ./scripts/helpers/pacman-install-list.sh
 
+# install and enable docker daemon
 ./scripts/helpers/setup-docker.sh
 
 pushd configs
@@ -50,5 +47,10 @@ popd || exit
 pushd surf
 sudo make install
 popd || exit
+
+# install ly
+./scripts/helpers/ly-install.sh # TODO add this as submoulde
+# Add desktop entry for ly desktop manager to show dwm
+sudo cp ./usr/share/xsessions/dwm.desktop /usr/share/xsessions
 
 reboot

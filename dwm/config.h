@@ -19,9 +19,9 @@ static const char *colors[][3]      = {
 };
 
 static const char *const autostart[] = {
-  // "sh", "-c", "xhost", "+SI:localuser:$USER", NULL, /* Needed for shared host/guest clipboard */
-  // "spice-vdagent", NULL,
-  // "xrandr", "--output", "Virtual-1", "--mode", "1920x1080", NULL, // Adjust for your device
+  "sh", "-c", "xhost", "+SI:localuser:$USER", NULL, /* Needed for shared host/guest clipboard */
+  "spice-vdagent", NULL,
+  "xrandr", "--output", "Virtual-1", "--mode", "1920x1080", NULL, // Adjust for your device
   "dwmblocks", NULL,
 	"st", NULL,
 	NULL /* terminate */

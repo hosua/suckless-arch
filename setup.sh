@@ -22,11 +22,11 @@ mkdir -p "$INSTALL_DIR"
 ./scripts/helpers/setup-docker.sh
 
 pushd configs
-cp -r .config .bash_aliases .Xauthority $HOME
+cp -r .config .bash_aliases $HOME
 popd || exit
 
 cp -r .config/qutebrowser $HOME/.config
-cp .bashrc .xinitrc $HOME
+cp .bashrc .xinitrc .Xauthority $HOME
 
 # install suckless tools
 
@@ -51,4 +51,4 @@ pushd surf
 sudo make install
 popd || exit
 
-# reboot
+reboot

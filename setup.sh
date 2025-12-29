@@ -45,4 +45,4 @@ pushd surf
 sudo make install
 popd || exit
 
-reboot
+# reboot

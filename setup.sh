@@ -12,8 +12,9 @@ mkdir -p "$INSTALL_DIR"
 # install all pacman dependencies
 ./scripts/helpers/pacman-install-list.sh
 
+# TODO: docker setup script is somehow borking setup, fix later
 # setup user permissions for docker and enable it in systemd
-./scripts/helpers/setup-docker.sh
+# ./scripts/helpers/setup-docker.sh
 
 pushd configs
 cp -r .config .bash_aliases .Xauthority $HOME
@@ -41,7 +42,7 @@ sudo make install
 popd || exit
 
 # I prefer qutebrowser over surf, but we'll install my build anyway
-pushd surf 
+pushd surf
 sudo make install
 popd || exit
 

@@ -21,7 +21,7 @@ When you login, you will start with just a `tty`. To launch the graphical enviro
 
 # What's in here?
 
-My minimally patched versions of suckless (dmenu, dwm, dwmblocks, st, surf). However, I don't actually recommend using surf. It consumes way more memory than it should and has far too many incompatibility issues with the modern web. `qutebrowser`, it is, however, great for vim nerds and does scratch that minimalist itch for me. Unfortunately it is not a part of the chrome/firefox ecosystem which makes plugin support quite meh, so you may end up wanting to just install `brave`.
+My minimally patched versions of suckless (dmenu, dwm, dwmblocks, st, surf). However, I don't actually recommend using surf. It consumes way more memory than it should and has far too many incompatibility issues with the modern web. I prefer `qutebrowser`. It is great for vim nerds and does a good job at scratching that minimalist itch. Unfortunately, it is not a part of the chrome/firefox ecosystem which makes plugin support quite meh, so you may end up wanting to just install `brave`.
 
 Be sure to run `:adblock-update` when launching `qutebrowser` for the first time.
 

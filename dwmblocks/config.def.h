@@ -1,5 +1,5 @@
 /* macro for conveniently specifying pathu and pathc below */
-#define PATH(name)                      "<path to the folder containing block scripts>/"name
+#define PATH(name)                      "/home/hosua/dev/suckless-arch/dwmblocks/blocks/"name
 
 /* buffer size for capturing output of the programs used for updating blocks */
 #define CMDOUTLENGTH                    50
@@ -43,6 +43,7 @@ static const char delimiter[] = { ' ', ' ', ' ', DELIMITERENDCHAR };
 
 static Block blocks[] = {
 /*      pathu                           pathc                           interval        signal */
+        { PATH("crypto/crypto.sh"),     PATH("crypto/crypto_button.sh"),5,              3},
         { PATH("calendar.sh"),          NULL,                           30,             1},
         { PATH("volume.sh"),            PATH("volume_button.sh"),       0,              2},
         // { PATH("cpu_temp.sh"),          PATH("cpu_temp_button.sh"),     1,              4},

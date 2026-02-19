@@ -1,3 +1,3 @@
 #!/bin/sh
-date '+%a, %m/%d/%Y %H:%M %p'
+date '+%a, %m/%d/%Y %I:%M %p'
 
